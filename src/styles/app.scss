@@ -1,0 +1,38 @@
+$color-background: #fff;
+$color-text: #000;
+
+$width-content: 48rem;
+$width-wide: 64rem;
+
+$font-regular: sans-serif;
+
+@import "config/reset.scss";
+@import "config/fonts.scss";
+@import "config/basic.scss";
+@import "config/animate.scss";
+
+body {
+  display: block;
+  align-items: center;
+  position: relative;
+
+  font: normal 16px/1.5 $font-regular;
+
+  color: $color-text;
+  background-color: $color-background;
+}
+
+@import "layout/header";
+@import "layout/logo";
+@import "layout/welcome";
+@import "layout/preload";
+@import "layout/progress";
+@import "layout/results";
+@import "layout/screen";
+@import "layout/manage";
+@import "layout/promo";
+@import "layout/footer";
+@import "layout/external";
+@import "layout/social";
+@import "layout/background";
+@import "layout/decor";

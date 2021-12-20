@@ -1,0 +1,35 @@
+doctype html
+html(prefix='og: http://ogp.me/ns#')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    link(rel='canonical' href=baseurl)
+    link(rel='icon' type='image/png' sizes='32x32' href=baseurl + 'images/favicon.png')
+    link(rel='icon' type='image/png' sizes='128x128' href=baseurl + 'images/icon-128.png')
+    link(rel='icon' type='image/png' sizes='256x256' href=baseurl + 'images/icon-256.png')
+
+    link(rel='stylesheet' type='text/css' href=baseurl + 'styles.min.css?v=' + version)
+
+    meta(property='og:url' content=baseurl)
+    meta(property='og:title' content='')
+    meta(property='og:description' content='')
+    meta(name='description' content='')
+
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:image' content=baseurl+'images/poster.jpg')
+
+    meta(property='og:image' content=baseurl+'images/poster.jpg')
+    meta(property='og:image:width' content='1200')
+    meta(property='og:image:height' content='630')
+
+    script.
+      (function(){});
+
+    title -
+
+    body 
+      p content goes here
+
+      script(src=baseurl+'scripts.min.js?v=' + version)
+
