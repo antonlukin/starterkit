@@ -9,7 +9,7 @@ html(prefix='og: http://ogp.me/ns#')
     link(rel='icon' type='image/png' sizes='128x128' href=baseurl + 'images/icon-128.png')
     link(rel='icon' type='image/png' sizes='256x256' href=baseurl + 'images/icon-256.png')
 
-    link(rel='stylesheet' type='text/css' href=baseurl + 'styles.min.css?v=' + version)
+    link(rel='stylesheet' type='text/css' href=baseurl + 'styles.min.css' + version)
 
     meta(property='og:url' content=baseurl)
     meta(property='og:title' content='')
@@ -31,5 +31,5 @@ html(prefix='og: http://ogp.me/ns#')
     body 
       p content goes here
 
-      script(src=baseurl+'scripts.min.js?v=' + version)
+      script(src=baseurl+'scripts.min.js' + version)
 

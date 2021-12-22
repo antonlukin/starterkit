@@ -90,20 +90,23 @@ function scriptsProcess() {
 }
 
 function htmlProcess() {
-  let baseurl = 'http://localhost:9000/';
+  const data = {
+    baseurl: 'http://localhost:9000/',
+    version: '',
+  };
 
   if (production) {
-    baseurl = process.env.BASEURL || '/';
+    data.baseurl = process.env.BASEURL || '/';
+
+    // Set random string as version
+    data.version = '?v=' + Math.random().toString(16).substring(2, 15);
   }
 
   return gulp.src(paths.src + '/views/index.pug')
     .pipe(plumber())
     .pipe(pug({
       basedir: __dirname,
-      data: {
-        version: process.env.VERSION || '',
-        baseurl: baseurl,
-      }
+      data: data,
     }))
     .pipe(concat('index.html'))
     .pipe(gulp.dest(paths.dist))
